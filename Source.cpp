@@ -102,7 +102,7 @@ uintptr_t FindFirstChild(uintptr_t instance, const char*obj)
 
 uintptr_t WaitForChild(uintptr_t instance, const char*obj, int timeout = 5000)
 {
-	for (int i = 0; i <= 5000; i++)
+	for (int i = 0; i <= timeout; i++)
 	{
 		if (FindFirstChild(instance, obj) != 0) { return FindFirstChild(instance, obj); }
 		Sleep(1);
